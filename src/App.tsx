@@ -1,10 +1,14 @@
-import Router from './router'
-import { WalletConnectionProvider } from './context/WalletContext'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Traders from './pages/Traders';
+import TraderDetails from './pages/TraderDetails';
+import Profile from './pages/Profile';
+
 
 export default function App() {
   return (
-    <WalletConnectionProvider>
+    
       <Router>
         <Navbar />
         <Routes>
@@ -14,6 +18,6 @@ export default function App() {
           <Route path="/profile" element={<Profile />} />
         </Routes>
       </Router>
-    </WalletConnectionProvider>
+ 
   )
 }
