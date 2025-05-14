@@ -1,36 +1,30 @@
 // /src/components/Navbar.tsx
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Button } from './ui/button';
+import { Wallet } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="bg-gradient-to-r from-blue-600 to-blue-800 p-4 shadow-md">
-      <div className="container mx-auto flex justify-between items-center">
-        {/* Логотип або заголовок */}
-        <div className="text-white text-xl font-bold">
-          <Link to="/">My App</Link>
-        </div>
+     <header className="border-b border-slate-800 bg-slate-950/50 backdrop-blur-sm">
+        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <div className="h-8 w-8 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 flex items-center justify-center">
+              <Wallet className="h-4 w-4 text-slate-950" />
+            </div>
+            <h1 className="text-xl font-bold">Algoflow</h1>
+          </div>
 
-        {/* Навігаційні посилання */}
-        <ul className="flex space-x-6">
-          <li>
-            <Link to="/" className="text-white hover:text-yellow-300 transition-colors duration-200">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/traders" className="text-white hover:text-yellow-300 transition-colors duration-200">
-              Traders
-            </Link>
-          </li>
-          <li>
-            <Link to="/profile" className="text-white hover:text-yellow-300 transition-colors duration-200">
-              Profile
-            </Link>
-          </li>
-        </ul>
-      </div>
-    </nav>
+          <div className='flex gap-3'>
+            <Link to='/'>Home</Link>
+            <Link to='/traders'>Traders</Link>
+            <Link to='/profile'>Profile</Link>
+          </div>
+          <Button variant="outline" className="border-slate-700 text-slate-300 hover:bg-slate-800 hover:text-white bg-transparent">
+            Connect Wallet
+          </Button>
+        </div>
+      </header>
   );
 };
 
