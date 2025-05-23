@@ -11,15 +11,13 @@ import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 const App: React.FC = () => {
   return (
     <Router>
-      <div className="App">
+      <div className="App min-h-screen bg-gradient-to-br from-slate-950 to-slate-900 text-white">
         {/* Навігаційний бар */}
         <Navbar />
         
         {/* Роутинг */} 
-        <div className='max-w-[1200px] m-auto'>
-          <div className='w-fit mx-auto my-10'>
-            <WalletMultiButton />
-          </div>
+        <div>
+         
           
         <Routes>
           <Route path="/" element={<Home />} />
