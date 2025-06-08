@@ -18,7 +18,6 @@ import {
   Loader2,
   AlertCircle,
 } from "lucide-react";
-import { Link } from "react-router-dom";
 import { useWalletModal } from "@solana/wallet-adapter-react-ui";
 
 const Profile = () => {
