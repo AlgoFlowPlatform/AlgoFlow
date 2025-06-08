@@ -160,7 +160,7 @@ const Profile = () => {
                           </tr>
                         </thead>
                         <tbody>
-                          {transactions.map((tx, i) => (
+                          {transactions.map((tx) => (
                             <tr
                               key={tx}
                               className="border-b border-slate-800/50 hover:bg-slate-800/20"
@@ -214,7 +214,5 @@ const Profile = () => {
     </div>
   );
 };
-
-
 
 export default Profile;
